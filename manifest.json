@@ -1,0 +1,31 @@
+{
+  "description": "Sorts professors on RateMyProfessor based off rating",
+  "manifest_version": 3,
+  "name": "RMP Sorter",
+  "version": "1.0",
+  "homepage_url": "https://www.github.com/tmcnulty387/ratemyprofessor-sorter",
+  "icons": {
+    "48": "icon.png"
+  },
+  "action": {
+    "default_icon": {
+      "48": "icon.png"
+    },
+    "default_title": "Sort Rate My Professors"
+  },
+  "permissions": ["activeTab", "scripting"],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tmcnulty387@gmail.com",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+
+  "background": {
+    "scripts": ["background.js"],
+    "service_worker": "background.js"
+  }
+}
